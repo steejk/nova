@@ -41,13 +41,12 @@ const resolvers = {
     name: 'commentsList',
 
     resolver(root, {terms, offset, limit}, context) {
-      const options = {
-        limit: (limit < 1 || limit > 10) ? 10 : limit,
-        skip: offset,
-        fields: context.getViewableFields(context.currentUser, context.Comments)
-      };
-
-      return context.Comments.find({postId: terms.postId}, options).fetch();
+      let {selector, options} = context.Comments.getParameters(terms);
+      options.limit = (limit < 1 || limit > 10) ? 10 : limit;
+      options.skip = offset;
+      // keep only fields that should be viewable by current user
+      options.fields = context.getViewableFields(context.currentUser, context.Comments);
+      return context.Comments.find(selector, options).fetch();
     },
 
   },
