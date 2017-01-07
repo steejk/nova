@@ -1,0 +1,89 @@
+.logo-hello {
+  display: flex;
+  justify-content: center;
+  color: #333;
+}
+
+.post-red{
+  background-color: #FFD3D2;
+}
+.post-blue{
+  background-color: #D2F5FF;
+}
+.post-yellow{
+  background-color: #FBFFD2;
+}
+.post-green{
+  background-color: #D2FFD2;
+}
+
+h1.logo-text {
+  font-size: 1.5em;
+  font-weight: lighter;
+}
+
+h3.posts-item-title {
+  font-size: 1.0rem;
+}
+
+div.posts-item-meta {
+    font-size: 0.6rem;
+}
+
+body {
+  font-size: 0.8em;
+  line-height: 1.0;
+}
+
+.post-item-count {
+  margin-right: 10px;
+}
+
+.posts-item {
+  padding: 8px 5px;
+  background-color: #f8f8f8;
+}
+
+.posts-item-title-url {
+  margin-left: 10px;
+  font-size: 0.8em;
+}
+
+.posts-item-title {
+  font-weight: normal;
+}
+
+.posts-list-header {
+  background-color: #ee5945;
+}
+
+
+.header-wrapper {
+    background: #eceeef;
+    margin-bottom: 0px;
+}
+
+.main, .header {
+  max-width: 1100px;
+}
+
+.header {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+button#user-dropdown.dropdown-toggle.btn.btn-default {
+  font-size: 0.75em;
+}
+
+.upvote-button {
+  border: 0px;
+}
+
+.posts-item-vote {
+  color: #ddd;
+}
+
+.upvote-button .vote-count {
+  font-weight: bolder;
+}
